@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+</head>
+<style>
+    body {
+        background-color: #171717;
+        color: aliceblue;
+        font-family: arial;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /* * {
+        border: 1px solid red;
+    } */
+
+    /* ###########  Start    ################# */
+    #topbar {
+        width: 100%;
+        height: 70px;
+        background-color: #171717;
+        margin-bottom: 15px;
+    }
+
+    #logo {
+        /* background-color: rgb(255, 102, 0); */
+        float: left;
+        margin: 10px;
+        height: 50px;
+    }
+
+    #logo h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    .topbarleft {
+        float: right;
+        /* background-color: rgb(230, 0, 0); */
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+        /* border: 2px solid red; */
+    }
+
+    .topbarleft img {
+        height: 40px;
+        width: 40px;
+        /* background-color: rgb(0, 79, 21); */
+
+        /* border: 2px solid rgb(236, 5, 5); */
+        margin: 5px;
+    }
+
+    #topbarmessagecounter {
+        background-color: red;
+        width: 40px;
+        height: 40px;
+        font-size: 150%;
+        text-align: center;
+        border-radius: 100px;
+
+    }
+
+    /* ############  Story Bar ##################### */
+
+    #storybar {
+        height: 150px;
+        /* background-color: rgba(127, 255, 212, 0.319); */
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .profile {
+        height: 90%;
+        width: 105px;
+        padding: 5px;
+        margin: auto;
+        display: inline-block;
+        /* float: left; */
+        /* background-color: rgba(127, 255, 212, 0.549); */
+        text-align: center;
+        /* border: 1px solid red; */
+    }
+
+    .pfpcontainer {
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        padding: 5px;
+        /* background-color: rgba(126, 63, 52, 0.735); */
+    }
+
+    .pfp {
+        padding: 7px;
+        height: 80px;
+        width: 80px;
+        border-radius: 100px;
+        border: 4px solid #ff0cbe;
+        /* border: 2px solid red; */
+    }
+
+    .pfp img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+    }
+
+    .pfpuserid {
+        /* background-color: blueviolet; */
+        /* border: 1px solid red; */
+        padding: 5px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* ############  BottumBar ##################### */
+    #bottumbar {
+        background-color: #171717;
+        height: 65px;
+        width: 100%;
+        position: fixed;
+        bottom: -1px;
+        text-align: center;
+        padding: 2px;
+        box-shadow: 0px -10px 30px #111111;
+    }
+
+    .bottumitem {
+        /* border: 2px solid red; */
+        display: inline-block;
+        width: 15%;
+        height: 60%;
+        /* height: 100px; */
+        margin: auto;
+        margin-top: 6px;
+        padding: 1%;
+
+    }
+
+    #bottumbar img {
+        width: 40px;
+    }
+
+    /* ############  POSTS ##################### */
+    /* #postsection {
+        height: 2000px;
+    } */
+
+    .post {
+        /* background-color: rgb(98, 18, 174); */
+        background-color: #101010;
+        width: 100%;
+        /* height: 500px; */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .postlable {
+        background-color: #101010;
+        height: 70px;
+        /* padding: 7px; */
+    }
+
+    .userdetails {
+        height: 60px;
+        display: inline-block;
+        /* background-color: rgb(77, 80, 0); */
+        margin: 5px;
+        margin-left: 15px;
+    }
+
+    .userpfp {
+        width: 50px;
+        height: 50px;
+        float: left;
+        /* display: inline-block; */
+        margin: 5px;
+        border-radius: 100px;
+        background-color: #ff0cbe;
+    }
+
+    .userpfp img {
+        width: 40px;
+        height: 40px;
+        /* padding: 5px; */
+        margin: 2px;
+        border-radius: 100px;
+        border: 3px solid #242424;
+        /* background-color: aliceblue; */
+    }
+
+    /* .userpfp {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+
+    .userpfp img {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    } */
+
+    .userinfo {
+        /* border: 2px solid red; */
+        /* width: 180px; */
+        height: 50px;
+        float: right;
+        /* display: inline-block; */
+        margin: 5px;
+        /* border-radius: 100px; */
+        /* background-color: #ff0cbe; */
+    }
+
+    .username,
+    .userid {
+        /* background-color: rgb(1, 50, 34); */
+        height: 19px;
+        display: block;
+        font-size: 15px;
+        margin: 0px;
+        padding: 3px;
+        /* float: left; */
+        /* border: 1px solid white; */
+    }
+
+    .userid {
+        /* background-color: rgb(1, 123, 123); */
+        color: #b0b0b0;
+    }
+
+    .showmore {
+        width: 60px;
+        height: 60px;
+        /* background-color: #7a005a; */
+        float: right;
+        /* padding: 7px; */
+        margin: 5px;
+    }
+
+    .showmore img {
+        width: 25px;
+        height: 25px;
+        /* margin: auto; */
+        padding: 20px;
+        /* background-color: red; */
+    }
+
+    .postbox {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .postbox img {
+        width: 100%;
+    }
+
+    .postactionbar {
+        height: 50px;
+        /* background-color: #4b0137; */
+    }
+
+    .postactionbar div {
+        float: left;
+        /* border: 1px solid greenyellow; */
+        width: 50px;
+        height: 50px;
+        margin-inline-end: 5px;
+    }
+
+
+    .postactionbar img {
+        width: 35px;
+        height: 35px;
+        padding: 7px;
+    }
+
+    .postcaption {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .postcaption a {
+        color: rgb(255, 0, 166);
+    }
+</style>
+
+<body>
+    <div id="topbar">
+        <div id="logo">
+            <h1>KinjoDzn</h1>
+        </div>
+        <div class="topbarleft">
+            <a href="inbox.html">
+                <img src="images/message.png" alt="Message">
+            </a>
+            <!-- <div id="topbarmessagecounter">1</div> -->
+        </div>
+        <div class="topbarleft">
+            <img src="images/heart.png" alt="Notification">
+
+        </div>
+    </div>
+
+    <div id="storybar">
+        <div class="profile">
+            <div class="pfpcontainer">
+                <div class="pfp">
+                    <img src="pfp.jpg" alt="pfpimage">
+                </div>
+            </div>
+            <div class="pfpuserid"><span>mr.kinjo</span></div>
+        </div>
+        <div class="profile">
+            <div class="pfpcontainer">
+                <div class="pfp">
+                    <img src="pfp.jpg" alt="pfpimage">
+                </div>
+            </div>
+            <div class="pfpuserid"><span>Luffynoaro</span></div>
+        </div>
+        <div class="profile">
+            <div class="pfpcontainer">
+                <div class="pfp">
+                    <img src="pfp.jpg" alt="pfpimage">
+                </div>
+            </div>
+            <div class="pfpuserid"><span>zoroarts</span></div>
+        </div>
+        <div class="profile">
+            <div class="pfpcontainer">
+                <div class="pfp">
+                    <img src="pfp.jpg" alt="pfpimage">
+                </div>
+            </div>
+            <div class="pfpuserid"><span>kisaki.edits</span></div>
+        </div>
+        <div class="profile">
+            <div class="pfpcontainer">
+                <div class="pfp">
+                    <img src="pfp.jpg" alt="pfpimage">
+                </div>
+            </div>
+            <div class="pfpuserid"><span>purveshchow</span></div>
+        </div>
+        <div class="profile">
+            <div class="pfpcontainer">
+                <div class="pfp">
+                    <img src="pfp.jpg" alt="pfpimage">
+                </div>
+            </div>
+            <div class="pfpuserid"><span>rajkush003</span></div>
+        </div>
+        <div class="profile">
+            <div class="pfpcontainer">
+                <div class="pfp">
+                    <img src="pfp.jpg" alt="pfpimage">
+                </div>
+            </div>
+            <div class="pfpuserid"><span>kisaki.edits</span></div>
+        </div>
+        <div class="profile">
+            <div class="pfpcontainer">
+                <div class="pfp">
+                    <img src="pfp.jpg" alt="pfpimage">
+                </div>
+            </div>
+            <div class="pfpuserid"><span>purveshchow</span></div>
+        </div>
+    </div>
+
+    <div id="postsection">
+        <div class="post">
+            <div class="postlable">
+                <div class="userdetails">
+                    <div class="userpfp">
+                        <img src="pfp.jpg" alt="">
+                    </div>
+                    <div class="userinfo">
+                        <h1 class="username" style="font-weight: bold;">
+                            KinjoDzn
+                        </h1>
+                        <h1 class="userid">
+                            mr.kinjo ~ Original audio
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="showmore">
+                    <img src="images/3dots.png" alt="showmore">
+                </div>
+            </div>
+            <div class="postbox">
+                <img src="Post.png" alt="post">
+            </div>
+            <div class="postactionbar">
+                <div style="margin-left: 10px;"><img src="images/heart.png" alt="action"></div>
+                <div><img src="images/comment.png" alt="action"></div>
+                <div><img src="images/sent.png" alt="action"></div>
+                <div style="float: right; margin-right: 10px;"><img src="images/save.png" alt="action"></div>
+            </div>
+            <div class="postcaption">
+                <span>
+                    Lorem ipsum dolor sit 🙆‍♂️amet consectetur adipisicing elit. Dignissimos ad ab saepe consectetur
+                    fuga
+                    exercitationem et nobis nam, necessitatibus quisquam.
+                    <br><br>
+                    <a href="#">#meme😁</a>
+                    <a href="#">#tech</a>
+                    <a href="#">#new</a>
+                    <a href="#">#2k23</a>
+                    <a href="#">#news</a>
+                    <a href="#">#geek</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="postlable">
+                <div class="userdetails">
+                    <div class="userpfp">
+                        <img src="pfp.jpg" alt="">
+                    </div>
+                    <div class="userinfo">
+                        <span class="username" style="font-weight: bold;">
+                            KinjoDzn
+                        </span>
+                        <span class="userid">
+                            mr.kinjo ~ Original audio
+                        </span>
+                    </div>
+                </div>
+
+                <div class="showmore">
+                    <img src="images/3dots.png" alt="showmore">
+                </div>
+            </div>
+            <div class="postbox">
+                <img src="post/Naruto And Sasuke Thumbnail (1).jpg" alt="post">
+            </div>
+            <div class="postactionbar">
+                <div style="margin-left: 10px;"><img src="images/heart.png" alt="action"></div>
+                <div><img src="images/comment.png" alt="action"></div>
+                <div><img src="images/sent.png" alt="action"></div>
+                <div style="float: right; margin-right: 10px;"><img src="images/save.png" alt="action"></div>
+            </div>
+            <div class="postcaption">
+                <span>
+                    Lorem ipsum dolor sit 🙆‍♂️amet consectetur adipisicing elit. Dignissimos ad ab saepe consectetur
+                    fuga
+                    exercitationem et nobis nam, necessitatibus quisquam.
+                    <br><br>
+                    <a href="#">#meme😁</a>
+                    <a href="#">#tech</a>
+                    <a href="#">#new</a>
+                    <a href="#">#2k23</a>
+                    <a href="#">#news</a>
+                    <a href="#">#geek</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="postlable">
+                <div class="userdetails">
+                    <div class="userpfp">
+                        <img src="pfp.jpg" alt="">
+                    </div>
+                    <div class="userinfo">
+                        <span class="username" style="font-weight: bold;">
+                            KinjoDzn
+                        </span>
+                        <span class="userid">
+                            mr.kinjo ~ Original audio
+                        </span>
+                    </div>
+                </div>
+
+                <div class="showmore">
+                    <img src="images/3dots.png" alt="showmore">
+                </div>
+            </div>
+            <div class="postbox">
+                <img src="post/hk Gamerz  (2).png" alt="post">
+            </div>
+            <div class="postactionbar">
+                <div style="margin-left: 10px;"><img src="images/heart.png" alt="action"></div>
+                <div><img src="images/comment.png" alt="action"></div>
+                <div><img src="images/sent.png" alt="action"></div>
+                <div style="float: right; margin-right: 10px;"><img src="images/save.png" alt="action"></div>
+            </div>
+            <div class="postcaption">
+                <span>
+                    Lorem ipsum dolor sit 🙆‍♂️amet consectetur adipisicing elit. Dignissimos ad ab saepe consectetur
+                    fuga
+                    exercitationem et nobis nam, necessitatibus quisquam.
+                    <br><br>
+                    <a href="#">#meme😁</a>
+                    <a href="#">#tech</a>
+                    <a href="#">#new</a>
+                    <a href="#">#2k23</a>
+                    <a href="#">#news</a>
+                    <a href="#">#geek</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="postlable">
+                <div class="userdetails">
+                    <div class="userpfp">
+                        <img src="pfp.jpg" alt="">
+                    </div>
+                    <div class="userinfo">
+                        <span class="username" style="font-weight: bold;">
+                            KinjoDzn
+                        </span>
+                        <span class="userid">
+                            mr.kinjo ~ Original audio
+                        </span>
+                    </div>
+                </div>
+
+                <div class="showmore">
+                    <img src="images/3dots.png" alt="showmore">
+                </div>
+            </div>
+            <div class="postbox">
+                <img src="post/pranav poster (1).png" alt="post">
+            </div>
+            <div class="postactionbar">
+                <div style="margin-left: 10px;"><img src="images/heart.png" alt="action"></div>
+                <div><img src="images/comment.png" alt="action"></div>
+                <div><img src="images/sent.png" alt="action"></div>
+                <div style="float: right; margin-right: 10px;"><img src="images/save.png" alt="action"></div>
+            </div>
+            <div class="postcaption">
+                <span>
+                    Lorem ipsum dolor sit 🙆‍♂️amet consectetur adipisicing elit. Dignissimos ad ab saepe consectetur
+                    fuga
+                    exercitationem et nobis nam, necessitatibus quisquam.
+                    <br><br>
+                    <a href="#">#meme😁</a>
+                    <a href="#">#tech</a>
+                    <a href="#">#new</a>
+                    <a href="#">#2k23</a>
+                    <a href="#">#news</a>
+                    <a href="#">#geek</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="postlable">
+                <div class="userdetails">
+                    <div class="userpfp">
+                        <img src="pfp.jpg" alt="">
+                    </div>
+                    <div class="userinfo">
+                        <span class="username" style="font-weight: bold;">
+                            KinjoDzn
+                        </span>
+                        <span class="userid">
+                            mr.kinjo ~ Original audio
+                        </span>
+                    </div>
+                </div>
+
+                <div class="showmore">
+                    <img src="images/3dots.png" alt="showmore">
+                </div>
+            </div>
+            <div class="postbox">
+                <img src="post/strawhat crew poster (1).png" alt="post">
+            </div>
+            <div class="postactionbar">
+                <div style="margin-left: 10px;"><img src="images/heart.png" alt="action"></div>
+                <div><img src="images/comment.png" alt="action"></div>
+                <div><img src="images/sent.png" alt="action"></div>
+                <div style="float: right; margin-right: 10px;"><img src="images/save.png" alt="action"></div>
+            </div>
+            <div class="postcaption">
+                <span>
+                    Lorem ipsum dolor sit 🙆‍♂️amet consectetur adipisicing elit. Dignissimos ad ab saepe consectetur
+                    fuga
+                    exercitationem et nobis nam, necessitatibus quisquam.
+                    <br><br>
+                    <a href="#">#meme😁</a>
+                    <a href="#">#tech</a>
+                    <a href="#">#new</a>
+                    <a href="#">#2k23</a>
+                    <a href="#">#news</a>
+                    <a href="#">#geek</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="postlable">
+                <div class="userdetails">
+                    <div class="userpfp">
+                        <img src="pfp.jpg" alt="">
+                    </div>
+                    <div class="userinfo">
+                        <span class="username" style="font-weight: bold;">
+                            KinjoDzn
+                        </span>
+                        <span class="userid">
+                            mr.kinjo ~ Original audio
+                        </span>
+                    </div>
+                </div>
+
+                <div class="showmore">
+                    <img src="images/3dots.png" alt="showmore">
+                </div>
+            </div>
+            <div class="postbox">
+                <img src="Post.png" alt="post">
+            </div>
+            <div class="postactionbar">
+                <div style="margin-left: 10px;"><img src="images/heart.png" alt="action"></div>
+                <div><img src="images/comment.png" alt="action"></div>
+                <div><img src="images/sent.png" alt="action"></div>
+                <div style="float: right; margin-right: 10px;"><img src="images/save.png" alt="action"></div>
+            </div>
+            <div class="postcaption">
+                <span>
+                    Lorem ipsum dolor sit 🙆‍♂️amet consectetur adipisicing elit. Dignissimos ad ab saepe consectetur
+                    fuga
+                    exercitationem et nobis nam, necessitatibus quisquam.
+                    <br><br>
+                    <a href="#">#meme😁</a>
+                    <a href="#">#tech</a>
+                    <a href="#">#new</a>
+                    <a href="#">#2k23</a>
+                    <a href="#">#news</a>
+                    <a href="#">#geek</a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="height: 65px; text-align: center;">
+        Loading More ...
+    </div>
+
+    <div id="bottumbar">
+        <div class="bottumitem">
+            <a href="#">
+                <img src="images/home.png" alt="">
+            </a>
+        </div>
+        <div class="bottumitem">
+            <a href="#">
+                <img src="images/Search.png" alt="">
+            </a>
+        </div>
+        <div class="bottumitem">
+            <a href="#">
+                <img src="images/plus.png" alt="">
+            </a>
+        </div>
+        <div class="bottumitem">
+            <a href="#">
+                <img src="images/video.png" alt="">
+            </a>
+        </div>
+        <div class="bottumitem">
+            <a href="#">
+                <img src="pfp.jpg" alt="" style="border-radius: 100px; box-shadow: 0px 0px 10px rgb(255, 0, 187);">
+            </a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

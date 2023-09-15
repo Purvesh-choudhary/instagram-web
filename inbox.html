@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+</head>
+<style>
+    body {
+        background-color: #171717;
+        color: aliceblue;
+        font-family: arial;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /* * {
+        border: 1px solid red;
+    } */
+
+    /* ######################### Start   ######################### */
+
+    .floatl {
+        float: left;
+    }
+
+    .floatr {
+        float: right;
+    }
+
+    #topbar {
+        width: 100%;
+        height: 60px;
+        background-color: #1d1d1d;
+        margin-bottom: 15px;
+    }
+
+    #topbarusername {
+        width: 130px;
+        /* overflow: hidden; */
+        margin-left: 10px;
+    }
+
+    #topbarusername h1 {
+        /* background-color: rgba(127, 255, 212, 0.575); */
+        height: 20px;
+        font-size: 23px;
+        font-weight: bold;
+        margin: 15px 0px 15px 0px;
+    }
+
+    .topbaritems {
+        /* background-color: green; */
+        /* border: 2px solid darkgreen; */
+        /* display: inline-block; */
+        height: 50px;
+        width: 50px;
+        margin: 5px;
+        /* padding: 10px; */
+    }
+
+    .topbaritems img {
+        height: 30px;
+        width: 30px;
+        padding: 10px;
+    }
+
+    /* ##################   messagesection   ######################### */
+    .profile {
+        /* background-color: #610000; */
+        height: 60px;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .profileitems {
+        /* background-color: rgb(53, 3, 99); */
+        /* border: 1px solid white; */
+        height: 50px;
+        width: 50px;
+    }
+
+    .pfp {
+        width: 46px;
+        height: 46px;
+        border-radius: 100px;
+        border: 2px solid #ff0cbe;
+        /* margin-left: 10px; */
+    }
+
+    .profiler {
+        width: 170px;
+        margin-left: 20px;
+        /* background-color: #333333; */
+    }
+
+    .pname,
+    .stats {
+        /* background-color: gray; */
+        height: 20px;
+    }
+
+    .pname {
+        margin-top: 5px;
+        font-weight: bold;
+        /* background-color: gray; */
+
+    }
+
+    /* .stats {
+        background-color: rgb(151, 20, 59);
+    } */
+
+
+    .mstats {
+        font-weight: bold;
+        /* background-color: rgb(4, 170, 68); */
+
+    }
+
+    /* .tstats {
+        background-color: rgb(1, 46, 18);
+
+    } */
+
+    .unreadshower {
+        background-color: #ff0cbe;
+        border-radius: 100px;
+        width: 10px;
+        height: 10px;
+        margin: 20px;
+    }
+
+    .camicon {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+</style>
+
+<body>
+
+    <div id="topbar">
+        <div class="topbaritems floatl">
+            <a href="#">
+                <img src="images/home.png" alt="">
+            </a>
+        </div>
+        <div class="topbaritems floatl" id="topbarusername">
+            <h1>
+                mr.kinjo
+            </h1>
+        </div>
+        <div class="topbaritems floatr">
+            <a href="#">
+                <img src="images/save.png" alt="">
+            </a>
+        </div>
+        <div class="topbaritems floatr">
+            <a href="#">
+                <img src="images/home.png" alt="">
+            </a>
+        </div>
+        <div class="topbaritems floatr">
+            <a href="#">
+                <img src="images/3dots.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="messagesection">
+        <div class="profile">
+            <div class="profileitems floatl" style="margin-left: 10px;">
+                <img src="pfp.jpg" alt="pfp" class="pfp">
+            </div>
+            <div class="profileitems floatl profiler">
+                <div class="pname">
+                    wise moon game
+                </div>
+                <div class="stats">
+                    <span class="mstats">2 message</span>
+                    .
+                    <span class="tstats">2d</span>
+                </div>
+            </div>
+            <div class="profileitems floatr" style="margin-right: 10px;">
+                <img src="images/video.png" alt="" class="camicon">
+            </div>
+            <div class="profileitems floatr">
+                <div class="unreadshower"></div>
+            </div>
+        </div>
+
+        <div class="profile">
+            <div class="profileitems floatl" style="margin-left: 10px;">
+                <img src="pfp.jpg" alt="pfp" class="pfp">
+            </div>
+            <div class="profileitems floatl profiler">
+                <div class="pname">
+                    wise moon game
+                </div>
+                <div class="stats">
+                    <span class="mstats">2 message</span>
+                    .
+                    <span class="tstats">2d</span>
+                </div>
+            </div>
+            <div class="profileitems floatr" style="margin-right: 10px;">
+                <img src="images/video.png" alt="" class="camicon">
+            </div>
+            <div class="profileitems floatr">
+                <div class="unreadshower"></div>
+            </div>
+        </div>
+
+
+        <!-- Fake FEED -->
+        <div class=" Fake ">
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profileitems floatl" style="margin-left: 10px;">
+                    <img src="pfp.jpg" alt="pfp" class="pfp">
+                </div>
+                <div class="profileitems floatl profiler">
+                    <div class="pname">
+                        wise moon game
+                    </div>
+                    <div class="stats">
+                        <span class="mstats">2 message</span>
+                        .
+                        <span class="tstats">2d</span>
+                    </div>
+                </div>
+                <div class="profileitems floatr" style="margin-right: 10px;">
+                    <img src="images/video.png" alt="" class="camicon">
+                </div>
+                <div class="profileitems floatr">
+                    <div class="unreadshower"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.userinfo {
+        display: inline-block;
+        height: 90px;
+        /* border: 2px solid red; */
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+
+    .username,
+    .userid {
+        height: 20px;
+        display: block;
+        /* float: left; */
+        /* border: 1px solid white; */
+    }
+
+    .userid {
+        color: #b0b0b0;
+    }
